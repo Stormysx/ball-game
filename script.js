@@ -34,12 +34,9 @@ function rastgeleSpawn() {
 }
 
 function hareketEt() {
-  if (!isSlowMotion) {
+  if (score >= 0) {
     x += dx;
     y += dy;
-  } else {
-    x += dx * slowMotionFactor;
-    y += dy * slowMotionFactor;
   }
 
   topDiv.style.left = x + "px";
@@ -102,12 +99,6 @@ function puanArtir() {
   } else {
     beyazCember.style.opacity = 0;
   }
-
-  // Topun hızını artır
-  if (score < 10 || score % 10 !== 0) {
-    dx *= 1.1;
-    dy *= 1.1;
-  }
 }
 
 function kareEkle() {
@@ -141,5 +132,11 @@ function handleKeyPress(event) {
 document.addEventListener("keydown", handleKeyPress);
 
 rastgeleSpawn();
-hareketEt();
-setInterval(kareEkle, 2000);
+
+function startGame() {
+  hareketEt();
+  setInterval(kareEkle, 2000);
+}
+
+scoreDiv.textContent = score;
+startGame();
