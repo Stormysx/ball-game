@@ -1,0 +1,50 @@
+#top {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: red;
+  transition: background-color 0.5s;
+}
+
+.kare {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+}
+
+#score {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  text-align: center;
+}
+
+.parilama {
+  animation: parilama 0.5s infinite alternate;
+}
+
+@keyframes parilama {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.beyaz-cember {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid white;
+  top: -10px;
+  left: -10px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
