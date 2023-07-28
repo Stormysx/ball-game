@@ -13,7 +13,7 @@ window.onscroll = function() {
 }
 
 document.getElementById("link1").addEventListener("click", function() {
-  window.location.href = "https://github.com/QuarkDevelop";
+  window.location.href = "https://github.com/QuarkDevelopmentt";
 });
 
 document.getElementById("link2").addEventListener("click", function() {
